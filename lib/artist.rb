@@ -26,4 +26,11 @@ class Artist
         # self.all.include?(name) ? self.all.find{|artist| artist.name = name} : self.new(name)
         self.all.find{|artist| artist.name = name} == nil ? self.new(name) : self.all.find{|artist| artist.name = name}
     end
+
+    def print_songs
+        songs = self.songs
+        songs.each do |song|
+            puts song.name
+        end
+    end
 end
